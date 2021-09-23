@@ -19,14 +19,14 @@ namespace ArithmeticCoding
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            Tuple<long[], char[]> lettersAndQuantity = calculateRepetitionFoEachLetter();
+            Tuple<long[], char[]> lettersAndQuantity = calculateRepetitionForEachLetter();
             char[] lettersWithoutRepeat = lettersAndQuantity.Item2;
             long[] quantityForEachLetter = lettersAndQuantity.Item1;
             double segmentOfMessage = calculateSegmentOfMessage(quantityForEachLetter);
             MessageBox.Show(segmentOfMessage.ToString());
         }
 
-        private Tuple<long[], char[]> calculateRepetitionFoEachLetter()
+        private Tuple<long[], char[]> calculateRepetitionForEachLetter()
         {
             string message = stringTextBox.Text;
             List<char> lettersWithoutRepeat = new List<char>();
