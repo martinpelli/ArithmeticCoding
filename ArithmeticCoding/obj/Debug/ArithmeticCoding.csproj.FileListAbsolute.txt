@@ -1,0 +1,10 @@
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\bin\Debug\ArithmeticCoding.exe.config
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\bin\Debug\ArithmeticCoding.exe
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\bin\Debug\ArithmeticCoding.pdb
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.csproj.AssemblyReference.cache
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.Form1.resources
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.Properties.Resources.resources
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.csproj.GenerateResource.cache
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.csproj.CoreCompileInputs.cache
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.exe
+C:\Users\marti\source\repos\ArithmeticCoding\ArithmeticCoding\obj\Debug\ArithmeticCoding.pdb

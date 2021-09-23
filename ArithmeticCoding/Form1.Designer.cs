@@ -47,7 +47,6 @@ namespace ArithmeticCoding
             this.tittleLabel.Size = new System.Drawing.Size(272, 31);
             this.tittleLabel.TabIndex = 0;
             this.tittleLabel.Text = "Codificador Arimético";
-            this.tittleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -83,6 +82,7 @@ namespace ArithmeticCoding
             this.confirmButton.TabIndex = 4;
             this.confirmButton.Text = "Codificar";
             this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // outputTextBox
             // 
