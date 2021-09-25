@@ -33,6 +33,7 @@ namespace ArithmeticCoding
             double upperBound = lowerAndUpperBounds.Item2;
             double lowerBound = lowerAndUpperBounds.Item1;
 
+            outputTextBox.Text = calculateBinaryNumberFromUpperBound(lowerBound, upperBound);
         }
 
         private Tuple<List<long>, List<char>> calculateRepetitionForEachLetter()
@@ -137,12 +138,10 @@ namespace ArithmeticCoding
                 {
                     if (message[i] == lettersWithoutRepeat[j])
                     {
-                        //MessageBox.Show("Leyendo la letra: " + message[i].ToString());
-                        //MessageBox.Show("Tiene esta cant de letras atras: " + numberOfLettersBehind.ToString());
                         upperBound = lowerBound + ((numberOfLettersBehind + quantityForEachLetter[j]) * segmentOfMessage);
                         lowerBound += numberOfLettersBehind * segmentOfMessage;
-                        MessageBox.Show("Cota Inferior: " + lowerBound.ToString());
-                        MessageBox.Show("Cota Superior: " + upperBound.ToString());
+                        //MessageBox.Show("Cota Inferior: " + lowerBound.ToString());
+                        //MessageBox.Show("Cota Superior: " + upperBound.ToString());
                         numberOfLettersBehind = 0;
                         positionOfLetter = 0;
                         break;
@@ -163,6 +162,34 @@ namespace ArithmeticCoding
         private double calculateSegmentOfMessage(double range, double messageSize)
         {
             return range / messageSize;
+        }
+
+        private string calculateBinaryNumberFromUpperBound(double lowerBound, double upperBound)
+        {
+            string binaryNumber = "";
+            double powerOfTwo = 0;
+            int numberOfOnesAndZeros = 0;
+
+            while ((powerOfTwo < lowerBound))
+            {
+                numberOfOnesAndZeros += 1;
+                upperBound *= 2;
+                if(upperBound >= 1)
+                {
+                    
+                    upperBound -= 1;
+                    binaryNumber += "1";
+                    powerOfTwo += Math.Pow(2, -numberOfOnesAndZeros);
+                    //MessageBox.Show(numberOfOnesAndZeros.ToString());
+                    //MessageBox.Show(powerOfTwo.ToString());
+                }
+                else
+                {
+                    binaryNumber += "0";
+                }
+            }
+
+            return binaryNumber;
         }
 
 
