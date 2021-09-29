@@ -34,6 +34,9 @@ namespace ArithmeticCoding
             double lowerBound = lowerAndUpperBounds.Item1;
 
             outputTextBox.Text = calculateBinaryNumberFromUpperBound(lowerBound, upperBound);
+
+            upperBound = binaryToDecimal(outputTextBox.Text);
+            MessageBox.Show(upperBound.ToString());
         }
 
         private Tuple<List<long>, List<char>> calculateRepetitionForEachLetter()
@@ -141,7 +144,7 @@ namespace ArithmeticCoding
                         upperBound = lowerBound + ((numberOfLettersBehind + quantityForEachLetter[j]) * segmentOfMessage);
                         lowerBound += numberOfLettersBehind * segmentOfMessage;
                         //MessageBox.Show("Cota Inferior: " + lowerBound.ToString());
-                        //MessageBox.Show("Cota Superior: " + upperBound.ToString());
+                        MessageBox.Show("Cota Superior: " + upperBound.ToString());
                         numberOfLettersBehind = 0;
                         positionOfLetter = 0;
                         break;
@@ -190,6 +193,25 @@ namespace ArithmeticCoding
             }
 
             return binaryNumber;
+        }
+
+        private double binaryToDecimal(string binaryNumber)
+        {
+            double decimalNumber = 0;
+            long binaryNumberPosition = - 1;
+
+            foreach (char number in binaryNumber)
+            {
+                if (number == '1')
+                {
+                    decimalNumber += (number - '0') * Math.Pow(2, binaryNumberPosition);
+                   
+                }
+                 binaryNumberPosition -= 1;
+                
+            }
+
+            return decimalNumber;
         }
 
 
